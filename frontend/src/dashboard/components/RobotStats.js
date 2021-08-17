@@ -17,7 +17,7 @@ const RobotStats = (props) => {
     return (
         <div className='p-3 m-4 bg-gray-400 border border-gray-900 h-64 rounded'>
             <h1 className='text-white mb-3'>Robot Stats</h1>
-            <div className='flex flex-col pl-12'>
+            <div className='flex flex-col items-center pl-12'>
                 <Stat statName='Current Mission' statValue={currentMission}/>
                 <Stat statName='Battery' statValue={`${battery}%`}/>
                 <Stat statName='Height' statValue={height}/>

@@ -59,16 +59,16 @@ const Login = (props) => {
 
     return (
         <div className='flex flex-column align-center justify-center h-full'>
-            <div className='h-64 flex flex-col justify-center m-auto p-4 rounded border border-blue-200'>
-                <h3 className='text-blue-200'>{`${!isSignup? 'Login to Juka:' : 'Signup for Juka'}`}</h3>
+            <div className='h-72 flex flex-col justify-center m-auto p-4 rounded border-4 border-gray-700 bg-gray-500'>
+                <h3 className='text-gray-800 font-semibold mb-3'>{`${!isSignup? 'Login to Indoor Robotics:' : 'Signup for Indoor Robotics'}`}</h3>
                 <TextInput placeholder='enter email' type='email' updateFunc={setEmail}/>
                 <TextInput placeholder='enter password' type='password' updateFunc={setPassword}/>
                 {isSignup && <TextInput placeholder='confirm password' type='password' updateFunc={setConfirmPassword}/>}
                 <div className='flex w-full justify-between align-center py-3'>
-                    <span onClick={()=>{setIsSignup(!isSignup); }} className='text-white text-sm cursor-pointer hover:underline'>
+                    <span onClick={()=>{setIsSignup(!isSignup); }} className='text-white text-sm cursor-pointer hover:underline font-semibold'>
                         {`${!isSignup?'Sign up': 'Cancel sign up'}`}
                     </span>
-                    <span onClick={onSubmit} className='text-white text-sm cursor-pointer hover:underline'>Submit</span>
+                    <span onClick={onSubmit} className='text-white text-sm cursor-pointer hover:underline font-semibold'>Submit</span>
                 </div>
                 <span className='text-xs text-red-500'>{validationError}</span>
             </div>

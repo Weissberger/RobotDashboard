@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, {useState, useEffect, useRef} from 'react';
+import {useState, useEffect, useRef} from 'react';
 axios.defaults.withCredentials = true;
 const INITIAL_SIM_DATA = {battery:[], height:[], position:[]};
 
@@ -96,7 +96,7 @@ const useRobotSimulator = (queue, setQueue) => {
         }, SIM_INTERVAL_DURATION_SECONDS*1000);
     }
 
-    return {battery, height, position, currentMission, lastMissionHistory}
+    return {battery, height, position, currentMission, lastMissionHistory, simRunning}
 }
 
 export default useRobotSimulator;

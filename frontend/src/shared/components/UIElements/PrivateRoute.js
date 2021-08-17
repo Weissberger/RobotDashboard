@@ -1,9 +1,8 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {Route, Redirect, useLocation} from "react-router-dom";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const location = useLocation();
-  console.log(location, Location)
   const {user} = location.state || {};
 
   if(!user){
