@@ -3,8 +3,8 @@ import axios from 'axios';
 import {useLocation} from 'react-router-dom';
 axios.defaults.withCredentials = true;
 
-const RUN_SAME_MISSION_TIMER_SECONDS = 3;
-const BATTERY_LOW_THRESHOLD_PCT = 90;
+const RUN_SAME_MISSION_TIMER_SECONDS = 10;
+const BATTERY_LOW_THRESHOLD_PCT = 50;
 
 const Actions = (props) => {
     const {setQueue, lastMissionHistory, battery} = props;
@@ -22,6 +22,7 @@ const Actions = (props) => {
     const addToQueue = (missionType) => {
         const now = new Date().getTime()
         const surpassedTime = (now - lastMissionHistory[missionType])/1000 
+
         if(surpassedTime < RUN_SAME_MISSION_TIMER_SECONDS){
             return alert(`Cant run this mission, please wait ${(RUN_SAME_MISSION_TIMER_SECONDS - surpassedTime).toFixed(2)} seconds`)
         }
