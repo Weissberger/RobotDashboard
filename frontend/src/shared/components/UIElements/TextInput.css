@@ -1,0 +1,9 @@
+.textInput {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #dce9ea;
+    border-radius: 5px;
+    height: 25px;
+    width: 300px;
+    border-color: rgb(107, 173, 228);
+}
