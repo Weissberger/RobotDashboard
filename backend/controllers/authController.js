@@ -7,7 +7,6 @@ const User = require("../models/Users");
 
 exports.login = (req, res, next) => {
     passport.authenticate("local", function(err, user, info) {
-        console.log(user, 'user')
         if (err) {
             return res.status(400).json({ errors: err });
         }
@@ -16,7 +15,6 @@ exports.login = (req, res, next) => {
         }
         req.logIn(user, function(err) {
             if (err) {
-                console.log(err, 'this is the error');
                 return res.status(400).json({ errors: err });
             }
             return res.status(200).json({ success: `logged in ${user.id}` });
@@ -37,7 +35,6 @@ exports.register = async(req, res, next) => {
             newUser
                 .save()
                 .then(user => {
-                    console.log(newUser, 'getting this user')
                     return res.status(200).send("success");
                 })
                 .catch(err => {

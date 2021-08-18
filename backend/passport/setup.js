@@ -19,28 +19,23 @@ passport.use(
         // Match User
         User.findOne({ email: email })
             .then(user => {
-                console.log('user', user)
                 // Create new User
                 if (!user) {
                     return done(null, null)
                 } else {
                     // Match password
-                    console.log('in else')
                     bcrypt.compare(password, user.password, (err, isMatch) => {
                         if (err) throw err;
 
                         if (isMatch) {
-                            console.log("MATCH")
                             return done(null, user);
                         } else {
-                            console.log('NOT MATCH')
                             return done(null, false, { message: "Wrong password" });
                         }
                     });
                 }
             })
             .catch(err => {
-                console.log(err)
                 return done(null, false, { message: err });
             });
     })
