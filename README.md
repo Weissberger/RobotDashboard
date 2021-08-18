@@ -35,3 +35,6 @@ you can use the one provided.
 
 # Notes
 The nav icon (company logo) is clickable and provides access to emailing mission history as well as a logout function
+
+# Simplifications
+The app uses robot data simulated from the frontend rather than the frontend (see RobotSimulator.js). Granted this is a simplification, it allowed me to develop all of the other features and mock the data needed for the project. 
