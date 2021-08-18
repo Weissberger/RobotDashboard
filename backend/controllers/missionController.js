@@ -4,7 +4,6 @@ const {Parser} = require('json2csv');
 const fs = require('fs');
 
 exports.storeMission =  async(req, res, next) => {
-    console.log(req.user, 'user!?!?')
     if(!req.user) return res.status(401).send('Not Authorized');
     const {type, data} = req.body
     const newMission = new Mission({ user: req.user, type, data: JSON.stringify(data) });
