@@ -3,7 +3,7 @@ const email = require("../handlers/email.js");
 const {Parser} = require('json2csv');
 const fs = require('fs');
 
-const storeMission =  async(req, res, next) => {
+exports.storeMission =  async(req, res, next) => {
     console.log(req.user, 'user!?!?')
     if(!req.user) return res.status(401).send('Not Authorized');
     const {type, data} = req.body
@@ -15,7 +15,7 @@ const storeMission =  async(req, res, next) => {
     });
 }
 
-const EmailMissions =  async(req, res, next) => {
+exports.emailMissions =  async(req, res, next) => {
     if(!req.user) return res.status(401).send('Not Authorized');
     const fields = ['type', 'data']
     let missions = await Mission.find({user: req.user._id}, {_id:0, user:0, __v:0});
