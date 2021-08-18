@@ -5,6 +5,7 @@
   "dependencies": {
     "@craco/craco": "^5.8.0",
     "@reach/menu-button": "^0.16.1",
+    "dotenv": "^10.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "5.2.0",

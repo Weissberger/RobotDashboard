@@ -22,13 +22,13 @@ const Header = (props) => {
     }
 
     return (
-        <div className='w-full h-24 p-4 bg-gray-300 flex flex-row justify-between items-center'>
+        <div className='w-full h-24 p-4 bg-gray-300 flex flex-row justify-between items-center border-b border-gray-800'>
             <div className='flex flex-row items-center'>
-                <span className='inline-flex items-center font-blue mr-4'>{user}</span>
+                <span className='inline-flex items-center font-blue mr-4 text-indigo-500 font-semibold'>{user}</span>
             </div>
 
             <Menu>
-                <MenuButton className={'h-14 w-14 rounded-full bg-jetGrey text-ivory capitalize'}>
+                <MenuButton className={'h-12 w-12 rounded-full bg-jetGrey text-ivory capitalize'}>
                     <img
                         alt='company-logo'
                         className={'object-cover overflow-hidden w-full h-full rounded-full'}

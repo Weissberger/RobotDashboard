@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import {useLocation} from 'react-router-dom';
+import Card from '../../shared/components/UIElements/Card.js';
+
 axios.defaults.withCredentials = true;
 
 
@@ -14,15 +16,15 @@ const Actions = (props) => {
     }
 
     return (
-        <div className='p-3 m-4 bg-gray-400 border border-gray-900 h-64 rounded'>
-            <h1 className='text-white'>Actions</h1>
-            <div className='flex flex-row justify-center p-6'>
-                <button onClick={()=>addToQueue('guard')} className='m-4 w-32 h-24 bg-gray-800 rounded text-white focus:outline-white hover:bg-gray-600'>Guard</button>
-                <button onClick={()=>addToQueue('patrol')} className='m-4 w-32 h-24 bg-gray-800 rounded text-white focus:outline-white hover:bg-gray-600'>Patrol</button>
-                <button onClick={()=>addToQueue('quick scan')} className='m-4 w-32 h-24 bg-gray-800 rounded text-white focus:outline-white hover:bg-gray-600'>Quick Scan</button>
+        <Card>
+            <h1 className='text-white font-semibold'>Actions</h1>
+            <div className='flex flex-col md:flex-row justify-center items-center md:p-6'>
+                <button onClick={()=>addToQueue('guard')} className='m-2 md:m-4 w-32 h-10 md:h-24 bg-gray-800 rounded text-white focus:outline-white hover:bg-gray-600 border border-indigo-400'>Guard</button>
+                <button onClick={()=>addToQueue('patrol')} className='m-2 md:m-4 w-32 h-10 md:h-24 bg-gray-800 rounded text-white focus:outline-white hover:bg-gray-600 border border-indigo-400'>Patrol</button>
+                <button onClick={()=>addToQueue('quick scan')} className='m-2 md:m-4 w-32 h-10 md:h-24 bg-gray-800 rounded text-white focus:outline-white hover:bg-gray-600 border border-indigo-400'>Quick Scan</button>
             </div>
             
-        </div>
+        </Card>
     )
 }
 

@@ -13,10 +13,12 @@ const Dashboard = () => {
     return (
     <>
     <Header/>
-    <div className='p-4 flex flex-col justify-center'>
-        <RobotStats battery={battery} height={height} position={position} currentMission={currentMission}/>
-        <Actions setQueue={setQueue} queue={queue} />
-        <Queue queue={queue} setQueue={setQueue} lastMissionHistory={lastMissionHistory} battery={battery} simRunning={simRunning}/>
+    <div style={{top: '14%'}} className='flex flex-col justify-center absolute w-full'>
+        <div className='p-4 flex flex-col justify-center'>
+            <RobotStats battery={battery} height={height} position={position} currentMission={currentMission}/>
+            <Actions setQueue={setQueue} queue={queue} />
+            <Queue queue={queue} setQueue={setQueue} lastMissionHistory={lastMissionHistory} battery={battery} simRunning={simRunning}/>
+        </div>
     </div>
     </>
     )

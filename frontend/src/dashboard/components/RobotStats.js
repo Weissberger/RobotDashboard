@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Card from '../../shared/components/UIElements/Card.js';
 
 const Stat = ({statName, statValue}) => {
     return (
-        <div className='flex flex-row mr-2 mb-4'>
+        <div className='flex flex-row justify-center items-center mr-2 mb-4'>
             <span className='text-gray-800 font-semibold mr-2'>{`${statName}:`}</span>
             <span className='text-white'>{`${statValue}`}</span>
         </div>
@@ -15,9 +15,9 @@ const RobotStats = (props) => {
     const {battery, height, position, currentMission} = props;
     const {x, y, z} = position;
     return (
-        <div className='p-3 m-4 bg-gray-400 border border-gray-900 h-64 rounded'>
-            <h1 className='text-white mb-3'>Robot Stats</h1>
-            <div className='flex flex-col items-center pl-12'>
+        <Card>
+            <h1 className='text-white mb-3 font-semibold'>Robot Stats</h1>
+            <div className='flex flex-col items-center'>
                 <Stat statName='Current Mission' statValue={currentMission}/>
                 <Stat statName='Battery' statValue={`${battery}%`}/>
                 <Stat statName='Height' statValue={height}/>
@@ -28,7 +28,7 @@ const RobotStats = (props) => {
                     <Stat statName='Z' statValue={z}/>
                 </div>
             </div>
-        </div>
+        </Card>
     )
 }
 

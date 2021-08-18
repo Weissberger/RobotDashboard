@@ -32,7 +32,7 @@ const useRobotSimulator = (queue, setQueue) => {
     
     const getRandomInt = (min, max) => {
         return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+    } 
 
     const moveRobot = () => {
         const batteryDecrement = getRandomInt(1,10)/10;
@@ -77,8 +77,12 @@ const useRobotSimulator = (queue, setQueue) => {
 
     const runSimulation = (missionType) => {
         setSimRunning(true);
-        const simLengthSeconds = getRandomInt(4, 15);
-        const SIM_INTERVAL_DURATION_SECONDS = 1
+        const simLengthSeconds = getRandomInt(
+            parseInt(process.env.REACT_APP_ROBOT_MISSION_DURATION_MIN_SECONDS), 
+            parseInt(process.env.REACT_APP_ROBOT_MISSION_DURATION_MAX_SECONDS)
+        );
+        console.log(simLengthSeconds, 'sim length')
+        const SIM_INTERVAL_DURATION_SECONDS = parseInt(process.env.REACT_APP_SIM_INTERVAL_DURATION_SECONDS)
         let simElapsedSeconds = 0;
         
         const simInterval = setInterval(()=>{

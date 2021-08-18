@@ -58,8 +58,8 @@ const Login = (props) => {
     }
 
     return (
-        <div className='flex flex-column align-center justify-center h-full'>
-            <div className='h-72 flex flex-col justify-center m-auto p-4 rounded border-4 border-gray-700 bg-gray-500'>
+        <div  className='flex flex-column align-center justify-center h-full'>
+            <div style={{top:'35%'}} className='h-72 flex flex-col justify-center m-auto p-4 rounded border-4 border-gray-700 bg-gray-500  absolute'>
                 <h3 className='text-gray-800 font-semibold mb-3'>{`${!isSignup? 'Login to Indoor Robotics:' : 'Signup for Indoor Robotics'}`}</h3>
                 <TextInput placeholder='enter email' type='email' updateFunc={setEmail}/>
                 <TextInput placeholder='enter password' type='password' updateFunc={setPassword}/>
