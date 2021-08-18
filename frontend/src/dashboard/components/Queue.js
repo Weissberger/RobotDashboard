@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {useInterval} from '../../shared/components/CustomHooks/Utilities';
 import Card from '../../shared/components/UIElements/Card.js';
-const path = require('path')
 
 const Queue = (props) => {
     const {queue, setQueue, lastMissionHistory, battery, simRunning} = props;

@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import {useLocation} from 'react-router-dom';
 import Card from '../../shared/components/UIElements/Card.js';
 
 axios.defaults.withCredentials = true;
@@ -8,8 +7,6 @@ axios.defaults.withCredentials = true;
 
 const Actions = (props) => {
     const {setQueue} = props;
-    const location = useLocation();
-    const {user} = location.state || {};
 
     const addToQueue = (missionType) => {
         setQueue(queue=>[...queue, {type:missionType, status: 'queued'}])

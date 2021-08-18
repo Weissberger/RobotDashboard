@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, MenuList, MenuButton, MenuLink, MenuItem } from '@reach/menu-button';
+import { Menu, MenuList, MenuButton, MenuItem } from '@reach/menu-button';
 import {useHistory, useLocation} from 'react-router-dom';
 const axios = require("axios");
 
@@ -36,10 +36,10 @@ const Header = (props) => {
                     />
                 </MenuButton>
                 <MenuList className='rounded-lg'>
-                    <MenuItem onClick={logOutUser} className='bg-gray-700 hover:bg-gray-600 p-4 rounded-t cursor-pointer'>
+                    <MenuItem onSelect={logOutUser} className='bg-gray-700 hover:bg-gray-600 p-4 rounded-t cursor-pointer'>
                         <span className={'text-white'} >Logout</span>
                     </MenuItem>
-                    <MenuItem onClick={emailMissions} className='bg-gray-700 hover:bg-gray-600 p-4 rounded-b cursor-pointer'>
+                    <MenuItem onSelect={emailMissions} className='bg-gray-700 hover:bg-gray-600 p-4 rounded-b cursor-pointer'>
                         <span className={'text-white'} >Email Mission History</span>
                     </MenuItem>
                 </MenuList>
