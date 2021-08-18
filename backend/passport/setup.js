@@ -4,12 +4,10 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
 passport.serializeUser((user, done) => {
-    console.log("CALLING SERIALIZE??!?!")
     done(null, user.id);
 });
 
 passport.deserializeUser((id, done) => {
-    console.log('getting called/??!?!?', id)
     User.findById(id, (err, user) => {
         done(err, user);
     });
@@ -25,23 +23,6 @@ passport.use(
                 // Create new User
                 if (!user) {
                     return done(null, null)
-                    // const newUser = new User({ email, password });
-                    // Hash password before saving in database
-                    // bcrypt.genSalt(10, (err, salt) => {
-                    //     bcrypt.hash(newUser.password, salt, (err, hash) => {
-                    //         if (err) throw err;
-                    //         newUser.password = hash;
-                    //         newUser
-                    //             .save()
-                    //             .then(user => {
-                    //                 return done(null, user);
-                    //             })
-                    //             .catch(err => {
-                    //                 return done(null, false, { message: err });
-                    //             });
-                    //     });
-                    // });
-                    // Return other user
                 } else {
                     // Match password
                     console.log('in else')
