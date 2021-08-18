@@ -13,7 +13,12 @@ https://www.mongodb.com/basics/create-database - create db
 If you choose to create your database, your connection string will be `mongodb://localhost:27020/<db_name>`
 
 # Variables.env
-Ensure you have copied over the variables.env file and udpdated that with the Mongo URI you plan to use
+Backend globals - Ensure you have copied over the variables.env file into the root (backend folder) and udpdated that with the Mongo URI you plan to use
+
+# .env
+Frontend globals - Ensure you have copied over the .env file into the root (frontend folder). 
+- You can play around with the battery low threshold as well as sim duration min/max and other params.
+- For example to change the time lockout before running same mission, you can adjust the REACT_APP_RUN_SAME_MISSION_LOCKOUT_SECONDS parameter
 
 # Running the project
 cd into the backend folder
@@ -24,5 +29,9 @@ cd into the frontend folder
 run `npm i`
 run `npm start`
 
+# Emailing mission history
+I've created a google account for testing but you should be able to change this to your own email (Update the MAIL_USER, MAIL_PASS in variables.env). To do so however you will need to also change the security settings to allow less secure apps to send emails on your behalf. Otherwise,
+you can use the one provided. 
+
 # Notes
-The nav icon (company logo) is clickable and provides access to mission history via email as well as a logout function
+The nav icon (company logo) is clickable and provides access to emailing mission history as well as a logout function
