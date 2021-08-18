@@ -13,10 +13,10 @@ https://www.mongodb.com/basics/create-database - create db
 If you choose to create your database, your connection string will be `mongodb://localhost:27020/<db_name>`
 
 # Variables.env
-Backend globals - Ensure you have copied over the variables.env file into the root (backend folder) and udpdated that with the Mongo URI you plan to use
+Backend globals - Ensure you have copied over the variables.env file into the root (backend folder) and udpdated that with the Mongo URI you plan to use. **Make sure it is named exactly variables.env**
 
 # .env
-Frontend globals - Ensure you have copied over the .env file into the root (frontend folder). 
+Frontend globals - Ensure you have copied over the .env file into the root (frontend folder). **Make sure it is named exactly .env**
 - You can play around with the battery low threshold as well as sim duration min/max and other params.
 - For example to change the time lockout before running same mission, you can adjust the REACT_APP_RUN_SAME_MISSION_LOCKOUT_SECONDS parameter
 
