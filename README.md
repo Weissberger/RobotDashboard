@@ -24,12 +24,12 @@ Frontend globals - Ensure you have copied over the .env file into the root (fron
 
 # Running the project
 cd into the backend folder
-run `npm i`
-run `npm start`
+run `npm i`  
+run `npm start`  
 
 cd into the frontend folder
-run `npm i`
-run `npm start`
+run `npm i`  
+run `npm start`  
 
 # Emailing mission history
 I've created a google account for testing but you should be able to change this to your own email (Update the MAIL_USER, MAIL_PASS in variables.env). To do so however you will need to also change the security settings to allow less secure apps to send emails on your behalf. Otherwise,
