@@ -23,11 +23,11 @@ Frontend globals - Ensure you have copied over the .env file into the root (fron
 - For example to change the time lockout before running same mission, you can adjust the REACT_APP_RUN_SAME_MISSION_LOCKOUT_SECONDS parameter
 
 # Running the project
-cd into the backend folder
+cd into the backend folder  
 run `npm i`  
 run `npm start`  
 
-cd into the frontend folder
+cd into the frontend folder  
 run `npm i`  
 run `npm start`  
 
