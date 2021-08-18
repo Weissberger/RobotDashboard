@@ -81,7 +81,6 @@ const useRobotSimulator = (queue, setQueue) => {
             parseInt(process.env.REACT_APP_ROBOT_MISSION_DURATION_MIN_SECONDS), 
             parseInt(process.env.REACT_APP_ROBOT_MISSION_DURATION_MAX_SECONDS)
         );
-        console.log(simLengthSeconds, 'sim length')
         const SIM_INTERVAL_DURATION_SECONDS = parseInt(process.env.REACT_APP_SIM_INTERVAL_DURATION_SECONDS)
         let simElapsedSeconds = 0;
         
