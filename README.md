@@ -7,7 +7,9 @@ To connect to my mongodb instance (URI provided in variables.env), please email 
 
 ## Option 2: Create your own local Mongo db using the CLI (install mongo & mongo cli)
 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/  - install mongo
+
 https://docs.mongodb.com/mongocli/stable/install/ - install mongo cli
+
 https://www.mongodb.com/basics/create-database - create db
 
 If you choose to create your database, your connection string will be `mongodb://localhost:27020/<db_name>`
