@@ -35,6 +35,8 @@ run `npm start`
 I've created a google account for testing but you should be able to change this to your own email (Update the MAIL_USER, MAIL_PASS in variables.env). To do so however you will need to also change the security settings to allow less secure apps to send emails on your behalf. Otherwise,
 you can use the one provided. 
 
+**Make sure to check the spam folder** 
+
 # Notes
 The nav icon (company logo) is clickable and provides access to emailing mission history as well as a logout function
 
