@@ -4,6 +4,9 @@ axios.defaults.withCredentials = true;
 const INITIAL_SIM_DATA = {battery:[], height:[], position:[]};
 
 const useRobotSimulator = (queue, setQueue) => {
+    // Simulates data that would be collected by a robot 
+    // in the field. Once the simulation is complete, data is uploaded
+    // to the server.
     const [simRunning, setSimRunning] = useState(false)
     const [battery, setBattery] = useState(100)
     const [height, setHeight] = useState(45)
